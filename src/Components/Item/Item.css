@@ -1,0 +1,70 @@
+.item {
+  width: 320px; /* Điều chỉnh kích thước phù hợp với layout */
+  box-sizing: border-box;
+  text-align: center;
+  margin: 20px; /* Cung cấp không gian đủ xung quanh mỗi item */
+  overflow: hidden; /* Ngăn chặn nội dung tràn ra ngoài */
+  border-radius: 8px; /* Làm tròn góc */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng cho item */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  padding: 20px;
+}
+
+.item img {
+  max-width: 100%; /* Đảm bảo hình ảnh không vượt quá kích thước của .item */
+  height: 200px; /* Điều chỉnh chiều cao cố định cho hình ảnh */
+  object-fit: cover; /* Cắt gọn hình ảnh để phù hợp */
+  border-top-left-radius: 8px; /* Làm tròn góc trên của hình ảnh */
+  border-top-right-radius: 8px;
+}
+
+.item p,
+.item-price {
+  padding: 0 10px; /* Thêm padding cho text và giá */
+}
+
+.item p {
+  color: #333; /* Màu chữ cho tên và mô tả */
+  overflow: hidden; /* Cắt nội dung nếu quá dài */
+  text-overflow: ellipsis; /* Thêm dấu ba chấm nếu nội dung bị cắt */
+  white-space: nowrap; /* Ngăn chặn text từ việc xuống dòng */
+}
+
+.description {
+  font-size: 14px; /* Điều chỉnh kích thước font cho mô tả */
+  color: #666; /* Màu chữ cho mô tả */
+  margin-bottom: 10px; /* Khoảng cách dưới mô tả */
+}
+
+.item-price {
+  display: flex;
+  justify-content: center; /* Căn giữa các giá ngang hàng */
+  align-items: center; /* Đảm bảo các giá cùng cao */
+  gap: 10px; /* Khoảng cách giữa giá mới và giá cũ */
+}
+
+.item-price-new,
+.item-price-old {
+  font-size: 18px; /* Điều chỉnh kích thước font cho giá, giữ đồng nhất */
+}
+
+.item-price-new {
+  color: #e53e3e; /* Màu chữ cho giá mới */
+  font-weight: bold; /* Làm đậm giá mới */
+}
+
+.item-price-old {
+  text-decoration: line-through; /* Gạch ngang giá cũ */
+  color: #718096; /* Màu chữ cho giá cũ */
+}
+
+.item:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Đậm bóng hơn khi hover */
+  transform: translateY(-5px); /* Nâng item lên khi hover */
+}
+
+.item a {
+  text-decoration: none;
+  color: inherit; /* Kế thừa màu chữ từ parent */
+  display: block; /* Cho phép click vào toàn bộ item */
+}

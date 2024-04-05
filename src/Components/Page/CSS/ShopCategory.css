@@ -1,0 +1,55 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+.shopcategory-banner {
+  display: block;
+  margin: 30px auto;
+  width: 82%;
+}
+.shopcategory-indexShort {
+  display: flex;
+  margin: 0px 170px;
+  justify-content: space-between;
+  align-items: center;
+}
+.shopcategory-sort {
+  padding: 10px 20px;
+  border-radius: 40px;
+  border: 1px solid #888;
+}
+.shopcategory-indexSort p {
+  font-weight: 600;
+}
+.shopcategory-products {
+  margin: 20px 170px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 80px;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.pagination button {
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: #f8f9fa;
+  color: #d43e19;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.pagination button:hover {
+  background-color: #e9ecef;
+}
+
+.pagination button[disabled],
+.pagination button[disabled]:hover {
+  color: #6c757d;
+  cursor: not-allowed;
+  background-color: #f8f9fa;
+}

@@ -1,0 +1,47 @@
+.menu-item {
+  position: relative;
+  list-style: none; /* Loại bỏ bullet points */
+}
+.submenu a {
+  text-decoration: none; /* Bỏ gạch chân */
+  color: inherit; /* Tuỳ chọn: Giữ màu chữ giống với phần còn lại, nếu bạn muốn */
+}
+.menu-item a {
+  text-decoration: none;
+  display: block; /* Để link chiếm toàn bộ không gian của li */
+  padding: 10px 15px; /* Thêm padding cho link */
+  transition: background-color 0.3s ease; /* Mượt mà khi hover */
+}
+
+.menu-item a:hover,
+.menu-item:hover a {
+  background-color: #f0f0f0; /* Màu nền khi hover */
+}
+
+.menu-item .submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  min-width: 140px; /* Đảm bảo submenu có chiều rộng tối thiểu */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden; /* Ẩn submenu để không chiếm không gian khi không hiển thị */
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  padding: 10px 0; /* Thêm padding cho submenu */
+}
+
+.menu-item:hover .submenu {
+  display: block;
+  opacity: 1;
+  visibility: visible; /* Hiển thị submenu khi hover */
+}
+
+.submenu li {
+  padding: 5px 15px; /* Thêm padding cho từng item */
+  cursor: pointer; /* Hiển thị con trỏ kiểu pointer khi hover qua */
+}
+
+.submenu li:hover {
+  background-color: #f0f0f0; /* Màu nền khi hover qua từng item */
+}

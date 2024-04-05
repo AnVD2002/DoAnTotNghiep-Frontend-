@@ -1,0 +1,64 @@
+.dashboard-header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.dashboard-sidebar {
+  width: 200px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background: #eee;
+  transition: width 0.5s ease; /* Thêm transition cho width */
+}
+
+.dashboard-sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dashboard-sidebar ul li a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.dashboard-container {
+  display: flex;
+}
+
+.content {
+  flex-grow: 1; /* Đảm bảo content chiếm hết không gian còn lại */
+  padding: 20px;
+  transition: margin-left 0.5s ease; /* Thêm transition cho margin-left */
+  margin-left: 200px; /* Đảm bảo rằng giá trị này bằng với chiều rộng của Sidebar */
+  padding: 20px;
+}
+
+.dashboard-sidebar.closed {
+  width: 0; /* Thay vì 'display: none', giảm width về 0 */
+}
+
+.dashboard-sidebar.open {
+  /* Style cho sidebar khi nó mở, không cần thay đổi gì nếu giữ nguyên */
+}
+
+/* Sử dụng class này cho .content khi sidebar đóng */
+.content-expanded {
+  margin-left: 0; /* Khi sidebar đóng, không cần margin-left */
+}
+.product-list {
+  margin-left: 220px; /* Tạo khoảng cách từ Sidebar, điều chỉnh giá trị này nếu cần */
+  padding: 20px;
+}
+.admin-list {
+  margin-left: 220px; /* Tạo khoảng cách từ Sidebar, điều chỉnh giá trị này nếu cần */
+  padding: 20px;
+}
+.user-list {
+  margin-left: 220px; /* Tạo khoảng cách từ Sidebar, điều chỉnh giá trị này nếu cần */
+  padding: 20px;
+}
